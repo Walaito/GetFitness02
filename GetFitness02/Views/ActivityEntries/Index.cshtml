@@ -1,4 +1,9 @@
 ﻿@model IEnumerable<GetFitness02.Models.Activity.ActivityEntry>
+@using Microsoft.AspNetCore.Identity
+@using GetFitness02.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
 @{
     ViewData["Title"] = "Index";
@@ -9,51 +14,72 @@
 <p style="padding-left: 20px;">
     <a asp-action="Create">Add Entry</a>
 </p>
-<table class="table" style="width: 100%; background-color:black;">
-    <thead>
-        <tr style="text-align:left; color:white;">
-            <th style="padding-right: 70px;">
-                @Html.DisplayNameFor(model => model.Date)
-            </th>
-            <th>
-                Activity
-                @*@Html.DisplayNameFor(model => model.ActivityItem)*@
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Duration)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Weight)
-            </th>
-            <th>
-                Calories burned
-            </th>
-        </tr>
-    </thead>
-    <tbody style="background-color: white;">
-        @foreach (var item in Model) {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ActivityItem.ActivityName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Duration)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Weight)
-                </td>   
-                <td>
-                    @Html.DisplayFor(modelItem => item.TotalCal)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ActivityEntryId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ActivityEntryId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ActivityEntryId">Delete</a>
-                </td>
+<div>
+    @if (SignInManager.IsSignedIn(User))
+    {
+    <table class="table" style="width: 100%; background-color:black;">
+        <thead>
+            <tr style="text-align:left; color:white;">
+                <th style="padding-right: 70px;">
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    Activity
+                    @*@Html.DisplayNameFor(model => model.ActivityItem)*@
+                </th>
+                @*<th>
+                    MET
+                    @Html.DisplayNameFor(model => model.ActivityItem)
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.Duration)<span>(min)</span>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Weight)<span>(kg)</span>
+                </th>
+                <th>
+                    Calories burned(kcal)
+                </th>
             </tr>
-}
-    </tbody>
-</table>
+        </thead>
+        <tbody style="background-color: white;">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ActivityItem.ActivityName)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.ActivityItem.Calorie)
+                    </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Duration)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Weight)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.TotalCal)
+                    </td>*@
+                    <td>@((item.Weight * item.ActivityItem.Calorie) * (item.Duration) / 60)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ActivityEntryId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ActivityEntryId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ActivityEntryId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    }
+    else
+    {
+        <div>
+            <div style="text-align:center; padding-left:20px;">Already have an account?<strong><a asp-area="" asp-controller="Account" asp-action="Login"> Log in</a></strong></div>
+        </div>
+    }
+</div>
+

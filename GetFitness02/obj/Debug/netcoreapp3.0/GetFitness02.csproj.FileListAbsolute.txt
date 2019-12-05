@@ -145,7 +145,6 @@ C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\Mi
 C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\dotnet-aspnet-codegenerator-design.dll
 C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-C:\Users\Walai\source\repos\GetFitness02\GetFitness02\obj\Debug\netcoreapp3.0\GetFitness02.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Walai\source\repos\GetFitness02\GetFitness02\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\ActivityItems\Create.cshtml.g.cs
 C:\Users\Walai\source\repos\GetFitness02\GetFitness02\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\ActivityItems\Delete.cshtml.g.cs
 C:\Users\Walai\source\repos\GetFitness02\GetFitness02\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\ActivityItems\Details.cshtml.g.cs
@@ -160,3 +159,11 @@ C:\Users\Walai\source\repos\GetFitness02\GetFitness02\obj\Debug\netcoreapp3.0\Ra
 C:\Users\Walai\source\repos\GetFitness02\GetFitness02\obj\Debug\netcoreapp3.0\Razor\Views\ActivityEntries\Details.cshtml.g.cs
 C:\Users\Walai\source\repos\GetFitness02\GetFitness02\obj\Debug\netcoreapp3.0\Razor\Views\ActivityEntries\Edit.cshtml.g.cs
 C:\Users\Walai\source\repos\GetFitness02\GetFitness02\obj\Debug\netcoreapp3.0\Razor\Views\ActivityEntries\Index.cshtml.g.cs
+C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\libman.json
+C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+C:\Users\Walai\source\repos\GetFitness02\GetFitness02\obj\Debug\netcoreapp3.0\GetFitness02.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Walai\source\repos\GetFitness02\GetFitness02\obj\Debug\netcoreapp3.0\Razor\Views\ApplicationUser\Index.cshtml.g.cs

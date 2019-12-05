@@ -28,10 +28,10 @@ namespace GetFitness02.Controllers
         public async Task<IActionResult> Index()
         {
 
-            var currentUser = await _userManager.GetUserAsync(User);
+            //var currentUser = await _userManager.GetUserAsync(User);
             var applicationDbContext = _context.ActivityEntry.Include(a => a.ActivityItem).
-                Include(a => a.ApplicationUser)
-                .Where(a => a.ApplicationUserId == currentUser.Id);
+                Include(a => a.ApplicationUser);
+                //.Where(a => a.ApplicationUserId == currentUser.Id);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -76,13 +76,6 @@ namespace GetFitness02.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-
-            var currentUser = await _userManager.GetUserAsync(User);
-            var applicationDbContext = _context.ActivityEntry.Include(a => a.ActivityItem).
-                Include(a => a.ApplicationUser)
-                .Where(a => a.ApplicationUserId == currentUser.Id);
-            //return View(await applicationDbContext.ToListAsync());
-
             ViewData["ActivityItemId"] = new SelectList(_context.ActivityItem, "ActivityItemId", "ActivityName", activityEntry.ActivityItemId);
             ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id", activityEntry.ApplicationUserId);
             return View(activityEntry);
