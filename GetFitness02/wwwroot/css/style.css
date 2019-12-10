@@ -157,8 +157,13 @@ a.btn.button {
     width: 120px;
 }
 
-/*Text styling*/
+div.btn-submit {
+    text-align: center;
+    padding: 0.25rem;
+    margin-top: 1rem;
+}
 
+/*Text styling*/
 h1.text {
     font-family: 'Saira Stencil One';
     text-align: center;

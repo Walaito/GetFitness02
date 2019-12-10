@@ -29,14 +29,14 @@
                         <input asp-for="ConfirmPassword" class="form-control" />
                         <span asp-validation-for="ConfirmPassword" class="text-danger" style="color:red; font-size:0.8rem;"></span>
                     </div>
-                    <div class="form-group" style="margin-bottom:10px; text-align: center; float:right;">
+                    <div class="form-group btn-submit">
                         <button type="submit" class="btn btn-default">Register</button>
                     </div>
                 </form>
             </div>
         </div>
         <div>
-            <div style="text-align:center; padding-left:20px;">Already have an account?<strong><a asp-area="" asp-controller="Account" asp-action="Login"> Log in</a></strong></div>
+            <div class="btn-submit">Already have an account?<strong><a asp-area="" asp-controller="Account" asp-action="Login"> Log in</a></strong></div>
         </div>
     </div>
 
