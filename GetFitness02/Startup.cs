@@ -30,7 +30,13 @@ namespace GetFitness02
             services.AddDbContext<ApplicationDbContext>(options =>
                                                                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>(opts => {
+                opts.Password.RequiredLength = 6;
+                opts.Password.RequireNonAlphanumeric = true;
+                opts.Password.RequireLowercase = false;
+                opts.Password.RequireUppercase = true;
+                opts.Password.RequireDigit = true;
+            })
                                                                 .AddEntityFrameworkStores<ApplicationDbContext>()
                                                                 .AddDefaultTokenProviders();
             services.AddMvc();

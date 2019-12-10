@@ -60,12 +60,12 @@ namespace GetFitness02.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, "Invalid email or password.");
                     return View(model);
                 }
             }
 
-            // If we got this far, something failed, redisplay form
+            // If we got this far, something failed, re-display form
             return View(model);
         }
 

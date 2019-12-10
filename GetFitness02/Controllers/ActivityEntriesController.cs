@@ -22,16 +22,19 @@ namespace GetFitness02.Controllers
         {
             _context = context;
             _userManager = userManager;
+           
+
         }
 
         // GET: ActivityEntries
         public async Task<IActionResult> Index()
         {
-
-            //var currentUser = await _userManager.GetUserAsync(User);
-            var applicationDbContext = _context.ActivityEntry.Include(a => a.ActivityItem).
-                Include(a => a.ApplicationUser);
-                //.Where(a => a.ApplicationUserId == currentUser.Id);
+            //IdentityUser user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
+            var currentUser = await _userManager.GetUserAsync(User);
+            var applicationDbContext = _context.ActivityEntry.Include(a => a.ActivityItem)
+                //Include(a => a.ApplicationUser);
+            .Where(a => a.ApplicationUserId == currentUser.Id);
+        
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -68,10 +71,17 @@ namespace GetFitness02.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ActivityEntryId,Date,Duration,Height,Weight,ActivityItemId,ApplicationUserId")] ActivityEntry activityEntry)
+        public async Task<IActionResult> Create([Bind("ActivityEntryId,Date,Duration,Height,Weight,ActivityItemId")] ActivityEntry activityEntry)
         {
             if (ModelState.IsValid)
             {
+
+                var currentUser = await _userManager.GetUserAsync(User);
+                //var currentUser = await _userManager.GetUserAsync(User);
+                //var applicationDbContext = _context.ActivityEntry.Include(a => a.ActivityItem).
+                //    Include(a => a.ApplicationUser)
+                //    .Where(a => a.ApplicationUserId == currentUser.Id);
+                activityEntry.ApplicationUserId = currentUser.Id;
                 _context.Add(activityEntry);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
