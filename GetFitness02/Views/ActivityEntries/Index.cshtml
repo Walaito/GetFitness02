@@ -11,9 +11,9 @@
 
 <h1 class="text">Your Activity Board</h1>
 
-<p class="add-entry">
-    <a asp-action="Create" class="btn">Add Entry</a>
-</p>
+<div class="btn-submit">
+    <a asp-action="Create" class="btn-submit">Add Entry</a>
+</div>
 <div class="show-on-s">
     @if (SignInManager.IsSignedIn(User))
     {
@@ -59,9 +59,9 @@
                     </td>
                     <td>@((item.Weight * item.ActivityItem.Calorie) * (item.Duration) / 60)</td>
                     <td class="hide-on-sm">
-                        <a asp-action="Edit" asp-route-id="@item.ActivityEntryId">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.ActivityEntryId">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.ActivityEntryId">Delete</a>
+                        <a asp-action="Edit" asp-route-id="@item.ActivityEntryId"><img src="~/images/pencil-edit-button.png" width="16"></a> |
+                        <a asp-action="Details" asp-route-id="@item.ActivityEntryId"><img src="~/images/check-list.png" width="16"></a> |
+                        <a asp-action="Delete" asp-route-id="@item.ActivityEntryId"><img src="~/images/delete.png" width="16"></a>
                     </td>
                 </tr>
             }

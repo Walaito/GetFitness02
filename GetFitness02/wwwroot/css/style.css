@@ -4,6 +4,10 @@ body {
     font-family:'Saira', sans-serif;
 }
 
+button {
+    cursor: pointer;
+}
+
 nav {
     position: fixed;
     z-index: 1;
@@ -161,8 +165,33 @@ div.btn-submit {
     text-align: center;
     padding: 0.25rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
+a.btn-submit, button.btn-submit, input.btn-submit {
+    text-align: center;
+    padding: 0.25rem;
+    margin-top: 1rem;
+    font-family: 'Saira', 'sans-serif';
+    background: #EE882A;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1em;
+    color: #000;
+}
+
+.back-to-list {
+    text-align: center; 
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.img-profile{
+    text-align: center;
+    margin: 2rem;
+}
 /*Text styling*/
 h1.text {
     font-family: 'Saira Stencil One';
@@ -180,7 +209,7 @@ a.text {
 
 
 table {
-    margin: 15% auto;
+    margin: 5rem auto;
     text-align: center;
     font-family: 'Arial';
     border-collapse: collapse;

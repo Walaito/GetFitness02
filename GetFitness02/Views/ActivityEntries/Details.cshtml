@@ -48,7 +48,7 @@
         </dl>*@
     </div>
 
-    <table style="width: 100%; background-color:black;">
+    <table class="table">
         <thead>
             <tr style="text-align:left; color:white;">
                 <th style="padding-right: 70px; width: 50%;">
@@ -84,7 +84,7 @@
         </tbody>
     </table>
 </div>
-<div style="text-align:center; padding-top:20px;">
-    <a asp-action="Edit" asp-route-id="@Model.ActivityEntryId">Edit</a> |
+<div class="back-to-list">
+    <a asp-action="Edit" asp-route-id="@Model.ActivityEntryId"><img src="~/images/pencil-edit-button.png" width="24"></a> |
     <a asp-action="Index">Back to List</a>
 </div>

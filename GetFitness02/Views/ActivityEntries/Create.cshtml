@@ -1,4 +1,6 @@
 ﻿@model GetFitness02.Models.Activity.ActivityEntry
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
 @{
     ViewData["Title"] = "Create";
@@ -32,14 +34,30 @@
                 <select asp-for="ActivityItemId" class="form-control" asp-items="ViewBag.ActivityItemId"></select>
             </div>
             <div class="form-group btn-submit">
-                <input type="submit" value="Create" class="btn btn-primary btn-submit" />
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <input type="submit" value="Create" class="btn btn-primary btn-submit" />
+                }
+                else
+                {
+                    <a class="btn-submit" asp-controller="Account" asp-action="Login">Login</a>
+                }
+                
             </div>
         </form>
     </div>
 </div>
 
 <div style="display:flex; justify-content:center; padding-top:20px;">
-    <a asp-action="Index">Back to List</a>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <a asp-action="Index">Back to List</a>
+    }
+    else
+    {
+        <a asp-area="" asp-controller="Account" asp-action="Login"></a>
+    }
+
 </div>
 
 @section Scripts {
