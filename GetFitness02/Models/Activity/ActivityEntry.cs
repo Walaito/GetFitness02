@@ -24,8 +24,7 @@ namespace GetFitness02.Models.Activity
         public string ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
 
-        [NotMapped]
-        public decimal TotalCal { get { return ((ActivityItem.Calorie * Weight) * (Duration / 60)); } }
+        //public decimal TotalCal { get { return ((ActivityItem.Calorie * Weight) * (Duration / 60)); } }
 
         //public decimal totalCal() { return ((ActivityItem.Calorie * Weight)*(Duration/60)); }
     }
