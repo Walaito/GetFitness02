@@ -124,6 +124,9 @@ namespace GetFitness02.Controllers
             {
                 try
                 {
+                    //get current user updated after editing
+                    var currentUser = await _userManager.GetUserAsync(User);
+                    activityEntry.ApplicationUserId = currentUser.Id;
                     _context.Update(activityEntry);
                     await _context.SaveChangesAsync();
                 }
