@@ -48,9 +48,16 @@ namespace GetFitness02
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
 
-            app.UseRouting();
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseRouting();
+            
             app.UseAuthentication();
             app.UseAuthorization();
 
