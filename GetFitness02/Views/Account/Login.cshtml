@@ -9,7 +9,7 @@
     ViewData["Title"] = "Log in";
 }
 <br />
-<div id="top-box">
+@*<div id="top-box">
     <br>
     <div class="grid-container">
         <div></div>
@@ -23,13 +23,11 @@
             <a asp-controller="ActivityEntries" asp-action="Create" class="btn button">New Activity</a>
         </div>
     </div>
-</div>
+</div>*@
 <div class="row">
     <div>
         <h4 style="font-family:'Saira Stencil One', cursive; font-size:2rem; text-align: center;">Get Start</h4>
-    </div>
-    <div>
-        <div style="text-align:center; padding-top:20px;">Need an account? <strong><a asp-area="" asp-controller="Account" asp-action="Register">Register here</a></strong></div>
+        <p style="text-align: center; margin:20px">Login to your account</p>
     </div>
     <div style="display:flex; justify-content:center; background:black; padding-top:50px; padding-bottom:50px; color:white;">
         <div>
@@ -51,5 +49,8 @@
                 </div>
             </form>
         </div>
+    </div>
+    <div>
+        <div style="text-align:center; padding-top:20px;">Need an account? <strong><a asp-area="" asp-controller="Account" asp-action="Register">Register here</a></strong></div>
     </div>
 </div>
