@@ -61,9 +61,12 @@ namespace GetFitness02.Controllers
         // GET: ActivityEntries/Create
         public IActionResult Create()
         {
+            ActivityEntry activityEntry =  new ActivityEntry();
+
+
             ViewData["ActivityItemId"] = new SelectList(_context.ActivityItem, "ActivityItemId", "ActivityName");
             ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "FullName");
-            return View();
+            return View(activityEntry);
         }
 
         // POST: ActivityEntries/Create
@@ -77,10 +80,6 @@ namespace GetFitness02.Controllers
             {
 
                 var currentUser = await _userManager.GetUserAsync(User);
-                //var currentUser = await _userManager.GetUserAsync(User);
-                //var applicationDbContext = _context.ActivityEntry.Include(a => a.ActivityItem).
-                //    Include(a => a.ApplicationUser)
-                //    .Where(a => a.ApplicationUserId == currentUser.Id);
                 activityEntry.ApplicationUserId = currentUser.Id;
                 _context.Add(activityEntry);
                 await _context.SaveChangesAsync();

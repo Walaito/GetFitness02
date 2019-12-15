@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0GR8BPR/V0uBsC0Q2RyjFQAAAAACAAAAAAAQZgAAAAEAACAAAACQErVRE+VxD75QZEghgK0DPDpqKOuOrDJYf/dWWLv4uAAAAAAOgAAAAAIAACAAAABFbAFmj3giG91TWPs/4+73EzKlwyHJY//Mhrb2xXPC04AAAADwFhWE9N9z7bpHdQwLCodUYPq8nOAC1FqMy1BLDL60aV4rG1YT5mKpgqcq6bPoH4Pdob2LKnK85m2TcgHzliaJCv5Kp84YvsSVOE3IChAEXpXEhDkSKF2Mgf4cve84XKea5hz0eARRHDSX8wOSuhxfAPKMyQVM74TRlXXUInIr7EAAAAASu+0MsNzQllM1vyyTERz+T9PFOrQiyUcBMZNJaQH2NMSxOEqoTaPdo9mTO3f8dBFVwqDOz944OnLq31F3JB4g</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:getmotioncalculator.database.windows.net,1433%3bInitial Catalog=Fitness02-002%3bPersist Security Info=False%3bUser ID=getmotioncalculator%3bPassword=Abcd-1234%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

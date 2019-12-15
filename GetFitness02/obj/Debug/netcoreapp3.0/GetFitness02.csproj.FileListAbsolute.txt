@@ -167,3 +167,5 @@ C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\Mi
 C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
 C:\Users\Walai\source\repos\GetFitness02\GetFitness02\obj\Debug\netcoreapp3.0\GetFitness02.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Walai\source\repos\GetFitness02\GetFitness02\obj\Debug\netcoreapp3.0\Razor\Views\ApplicationUser\Index.cshtml.g.cs
+C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\appsettings - Copy.Development.json
+C:\Users\Walai\source\repos\GetFitness02\GetFitness02\bin\Debug\netcoreapp3.0\appsettings - Copy.json

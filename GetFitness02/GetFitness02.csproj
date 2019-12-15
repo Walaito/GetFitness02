@@ -31,6 +31,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Account\Login.cshtml" />
+    <None Include="Views\Account\Register.cshtml" />
+    <None Include="Views\Account\SignedOut.cshtml" />
+    <None Include="Views\ActivityEntries\Create.cshtml" />
+    <None Include="Views\ActivityEntries\Delete.cshtml" />
+    <None Include="Views\ActivityEntries\Details.cshtml" />
+    <None Include="Views\ActivityEntries\Edit.cshtml" />
+    <None Include="Views\ActivityEntries\Index.cshtml" />
+    <None Include="Views\ApplicationUser\Index.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Views\_ViewImports.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
     <None Include="wwwroot\images\inphographic-yoga.jpg" />
     <None Include="wwwroot\images\inphographic.jpg" />
     <None Include="wwwroot\images\motion1.jpg" />
