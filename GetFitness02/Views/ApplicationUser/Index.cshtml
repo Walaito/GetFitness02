@@ -21,8 +21,8 @@
                     <a asp-area="" asp-controller="Home" asp-action="Index">Hello! </a> @UserManager.GetUserName(User)
                 </div>
                 @*<div>
-                    @Html.DisplayNameFor(model => model.FullName)
-                </div>*@
+                        @Html.DisplayNameFor(model => model.FullName)
+                    </div>*@
                 <div class="btn-submit">
                     <button type="submit" class="btn-submit">Log out</button>
                 </div>
@@ -33,6 +33,9 @@
     {
         <div>
             <div class="btn-submit">Already have an account?<strong><a asp-area="" asp-controller="Account" asp-action="Login"> Log in</a></strong></div>
+        </div>
+        <div>
+            <div style="text-align:center; padding-top:20px;">Need an account? <strong><a asp-area="" asp-controller="Account" asp-action="Register">Register here</a></strong></div>
         </div>
     }
 </div>
