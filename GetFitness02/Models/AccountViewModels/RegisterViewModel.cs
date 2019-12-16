@@ -15,7 +15,7 @@ namespace GetFitness02.Models.AccountViewModels
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
-        [RegularExpression("([a-zA-Z]{1,})([@$!%*#?&]{1,})([0-9]{1,})", ErrorMessage = "Password must contain atleast 1 number, 1 letter, 1 capital letter, and 1 special character.")]
+        //[RegularExpression("([a-zA-Z]{1,})([@$!%*#?&]{1,})([0-9]{1,})", ErrorMessage = "Password must contain atleast 1 number, 1 letter, 1 capital letter, and 1 special character.")]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
